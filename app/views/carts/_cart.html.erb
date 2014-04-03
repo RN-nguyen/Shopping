@@ -1,0 +1,7 @@
+<h2> Your Pragmatic Cart </h2>
+<ul>
+ <%= render(@cart.line_items) %>
+  <li><%= number_to_currency(@cart.total_price) %></li>
+</ul>
+<%= button_to 'Empty cart', @cart, method: :delete,
+  data: { confirm: 'Are you sure?' } %>
